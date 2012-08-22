@@ -19,9 +19,9 @@ MANIFEST = {
     "name": "Packaged App",
     "description": "This is a packaged app",
     "icons": {
-        "16": "/img/16.png",
-        "32": "/img/32.png",
-        "256": "/img/256.png"
+        "16": "/icons/16.png",
+        "32": "/icons/32.png",
+        "256": "/icons/256.png"
     },
     "developer": {
         "name": "Mozilla Labs",
