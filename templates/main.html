@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <title>Test Packaged Apps</title>
+    <meta name="description" content="Build packaged open web apps dynamically...for testing.">
+    <meta name="author" content="Matt Basta @mattbasta">
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link href="/static/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/style.css" rel="stylesheet">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript" src="/static/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/static/script.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="navbar">
+        <div class="navbar-inner">
+          <a class="brand" href="#">
+            Test Packaged Apps
+          </a>
+        </div>
+      </div>
+
+      <p>
+        This site will create a random, working packaged app. If you specify
+        the options below, you can create broken or invalid apps for testing
+        purposes.
+      </p>
+
+      <ul class="nav nav-tabs">
+        <li class="active"><a href="#uncustomized" data-toggle="tab">Uncustomized</a></li>
+        <li><a href="#customized" data-toggle="tab">Customized</a></li>
+      </ul>
+
+      <div class="tab-content">
+        <p class="tab-pane active quick-download" id="uncustomized">
+          Download an uncustomized app:
+          <a class="btn btn-medium btn-success" href="/build">Quick Download</a>
+        </p>
+
+        <form class="tab-pane form-horizontal" id="customized" action="/build" method="post">
+          <div class="control-group">
+            <label class="control-label">Include</label>
+            <div class="controls">
+              <label class="checkbox"><input type="checkbox" name="include_jquery" value="true" /> jQuery</label>
+              <label class="checkbox"><input type="checkbox" name="include_bcss" value="true" /> Broken CSS</label>
+              <label class="checkbox"><input type="checkbox" name="include_bjs" value="true" /> Broken JavaScript</label>
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label">Exclude</label>
+            <div class="controls">
+              <label class="checkbox"><input type="checkbox" name="exclude_manifest" value="true" /> the Manifest</label>
+              <label class="checkbox"><input type="checkbox" name="exclude_html" value="true" /> HTML</label>
+              <label class="checkbox"><input type="checkbox" name="exclude_css" value="true" /> CSS</label>
+              <label class="checkbox"><input type="checkbox" name="exclude_js" value="true" /> JS</label>
+              <label class="checkbox"><input type="checkbox" name="exclude_icons" value="true" /> Icons</label>
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label">Options</label>
+            <div class="controls">
+              <label class="checkbox"><input type="checkbox" name="opt_xss" value="true" /> XSS strings</label>
+            </div>
+          </div>
+
+          <p class="form-actions">
+            <input class="btn btn-success" type="submit" value="Download" />
+          </p>
+        </form>
+      </div>
+
+      <footer>
+        Fork me on <a href="https://github.com/mattbasta/testpackagedapps">Github</a>
+      </footer>
+
+    </div> <!-- /container -->
+
+    <!--[if lt IE 7 ]>
+      <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+      <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+    <![endif]-->
+  </body>
+</html>

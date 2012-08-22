@@ -1,0 +1,422 @@
+html, body, /*Document-level Components*/
+div, span, /*Fundamental Components*/
+header, footer, nav, menu, /*Structural Elements*/
+article, aside, section, figure, /*Groupings*/
+details, summary, figcaption, meter, /*Informational*/
+a, img, p, /*Basic Components*/
+dl, dt, dd, ol, ul, li, /*Lists*/
+h1, h2, h3, h4, h5, h6, hgroup, /*Headings*/
+/*Markup*/
+b, del, em, i, ins, small, strong, sub, sup,
+dfn, kbd, pre, q, var, mark,
+abbr, address, blockquote, cite, code, samp,
+embed, object, iframe, /*Embed*/
+form, fieldset, label, legend, /*Forms*/
+table, caption, tbody, tfoot, thead, tr, th, td, time, /*Tables*/
+audio, video /*Media*/
+{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+    font-style:normal;
+    font-weight:normal;
+}
+body {
+    line-height: 1;
+    color:black;
+}
+section, article, aside, header, footer, nav, dialog, figure,
+pre, code {display:block;}
+p code, p pre {display:inline;}
+strong {font-weight:bold;}
+ol, ul {list-style: none;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+/* remember to define focus styles! */
+:focus {outline: 0;}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+body.sm {font-size:70%;}
+body,
+body.med {font-size:80%;}
+body.lg {font-size:90%;}
+body.xl {font-size:100%;}
+
+body.serif {font-family:Cambria,Times New Roman,Times,serif;}
+body.times,
+body.times-new-roman {font-family:Times New Roman,Times,serif;}
+body.georgia {font-family:Georgia,Times,serif;}
+
+body.sans-serif {font-family:Arial,Helvetica,sans-serif;}
+body.verdana {font-family:Verdana,Arial,Helvetica,sans-serif;}
+
+ul,
+ol {padding-left:5ex;}
+ul {list-style:disc;}
+ul ul {list-style:square;}
+ul ul ul {list-style:circle;}
+ol {list-style:decimal;}
+ol ol {list-style:lower-alpha;}
+ol ol ol {list-style:lower-roman;}
+
+small {font-size:0.8em;}
+address {
+    padding:0 1em;
+    margin-left:1em;
+    margin-right:1em;
+}
+
+b {font-weight:bold;}
+i,
+cite,
+var,
+em {font-style:oblique;}
+
+ins {text-decoration: underline;}
+del {text-decoration: line-through;}
+
+sup {vertical-align:super;}
+sub {vertical-align:sub;}
+sup, sub {font-size:0.7em;}
+
+big {font-size:1.2em;}
+abbr,
+acronym {
+    font-size:1.25ex;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+}
+
+/*
+Tables
+*/
+
+table {
+    width:100%;
+    border-top:1px solid #aaa;
+}
+th,
+td {padding:0.5em 0 0.5em 0.25em;}
+th {
+    border-bottom:1px solid #777;
+    font-size:1.1em;
+    text-align:left;
+}
+td {border-bottom:1px solid #aaa}
+caption {
+    text-align:right;
+    padding:0.75em 0.25em;
+    color:#666;
+}
+
+table.grid {border:1px solid #aaa;}
+table.grid th {border:1px solid #777;}
+table.grid td {border:1px solid #aaa;}
+
+body {text-align:center;}
+body.left {text-align:left;}
+#container {
+    width:960px;
+    text-align:left;
+    margin:0 auto;
+    position:relative;
+}
+body.left #container {margin:0;}
+
+hr {clear:both;}
+
+#container .ghalf {width:45%;}
+#container .gthird {width:28.3333%;}
+#container .gquarter {width:20%;}
+
+#container .ghalf,
+#container .gthird,
+#container .gquarter {
+    float:left;
+    display:inline;
+    margin-left:2.5%;
+    margin-right:2.5%;
+}
+
+.gg25pg #container.ghalf {width:47.5%;}
+.gg25pg #container.gthird {width:30.8333%;}
+.gg25pg #container.gquarter {width:22.5%;}
+
+.gg25pg #container.ghalf,
+.gg25pg #container.gthird,
+.gg25pg #container.gquarter {
+    float:left;
+    display:inline;
+    margin-left:1.25%;
+    margin-right:1.25%;
+}
+
+.gg0g #container.ghalf {width:50%;}
+.gg0g #container.gthird {width:33.3333%;}
+.gg0g #container.gquarter {width:25%;}
+
+.gg0g #container.ghalf,
+.gg0g #container.gthird,
+.gg0g #container.gquarter {
+    float:left;
+    display:inline;
+}
+
+#container .g1 {width:60px;}
+#container .g2 {width:140px;}
+#container .g3 {width:220px;}
+#container .g4 {width:300px;}
+#container .g5 {width:380px;}
+#container .g6 {width:460px;}
+#container .g7 {width:540px;}
+#container .g8 {width:620px;}
+#container .g9 {width:700px;}
+#container .g10 {width:780px;}
+#container .g11 {width:860px;}
+
+#container .g1,
+#container .g2,
+#container .g3,
+#container .g4,
+#container .g5,
+#container .g6,
+#container .g7,
+#container .g8,
+#container .g9,
+#container .g10,
+#container .g11 {
+    float:left;
+    display:inline;
+    margin-left:10px;
+    margin-right:10px;
+}
+
+.gg10g #container .g1 {width:70px;}
+.gg10g #container .g2 {width:150px;}
+.gg10g #container .g3 {width:230px;}
+.gg10g #container .g4 {width:310px;}
+.gg10g #container .g5 {width:390px;}
+.gg10g #container .g6 {width:470px;}
+.gg10g #container .g7 {width:550px;}
+.gg10g #container .g8 {width:630px;}
+.gg10g #container .g9 {width:710px;}
+.gg10g #container .g10 {width:790px;}
+.gg10g #container .g11 {width:870px;}
+
+.gg10g #container .g1,
+.gg10g #container .g2,
+.gg10g #container .g3,
+.gg10g #container .g4,
+.gg10g #container .g5,
+.gg10g #container .g6,
+.gg10g #container .g7,
+.gg10g #container .g8,
+.gg10g #container .g9,
+.gg10g #container .g10,
+.gg10g #container .g11 {
+    margin-left:5px;
+    margin-right:5px;
+}
+
+.gg0g #container .g1 {width:80px;}
+.gg0g #container .g2 {width:160px;}
+.gg0g #container .g3 {width:240px;}
+.gg0g #container .g4 {width:320px;}
+.gg0g #container .g5 {width:400px;}
+.gg0g #container .g6 {width:480px;}
+.gg0g #container .g7 {width:560px;}
+.gg0g #container .g8 {width:640px;}
+.gg0g #container .g9 {width:720px;}
+.gg0g #container .g10 {width:800px;}
+.gg0g #container .g11 {width:880px;}
+
+.gg0g #container .g1,
+.gg0g #container .g2,
+.gg0g #container .g3,
+.gg0g #container .g4,
+.gg0g #container .g5,
+.gg0g #container .g6,
+.gg0g #container .g7,
+.gg0g #container .g8,
+.gg0g #container .g9,
+.gg0g #container .g10,
+.gg0g #container .g11 {
+    margin-left:0;
+    margin-right:0;
+}
+
+
+#container .gfirst {margin-left:0;}
+#container .glast {margin-right:0;}
+
+#container .s1 {margin-right:90px;}
+#container .s2 {margin-right:170px;}
+#container .s3 {margin-right:250px;}
+#container .s4 {margin-right:330px;}
+#container .s5 {margin-right:110px;}
+#container .s6 {margin-right:490px;}
+#container .s7 {margin-right:570px;}
+#container .s8 {margin-right:650px;}
+#container .s9 {margin-right:730px;}
+#container .s10 {margin-right:810px;}
+#container .s11 {margin-right:890px;}
+
+.gg10g #container .s1 {margin-right:85px;}
+.gg10g #container .s2 {margin-right:165px;}
+.gg10g #container .s3 {margin-right:245px;}
+.gg10g #container .s4 {margin-right:325px;}
+.gg10g #container .s5 {margin-right:105px;}
+.gg10g #container .s6 {margin-right:485px;}
+.gg10g #container .s7 {margin-right:565px;}
+.gg10g #container .s8 {margin-right:645px;}
+.gg10g #container .s9 {margin-right:725px;}
+.gg10g #container .s10 {margin-right:805px;}
+.gg10g #container .s11 {margin-right:885px;}
+
+.gg0g #container .s1 {margin-right:80px;}
+.gg0g #container .s2 {margin-right:160px;}
+.gg0g #container .s3 {margin-right:240px;}
+.gg0g #container .s4 {margin-right:320px;}
+.gg0g #container .s5 {margin-right:100px;}
+.gg0g #container .s6 {margin-right:480px;}
+.gg0g #container .s7 {margin-right:560px;}
+.gg0g #container .s8 {margin-right:640px;}
+.gg0g #container .s9 {margin-right:720px;}
+.gg0g #container .s10 {margin-right:800px;}
+.gg0g #container .s11 {margin-right:880px;}
+
+#container .p1 {margin-left:90px;}
+#container .p2 {margin-left:170px;}
+#container .p3 {margin-left:250px;}
+#container .p4 {margin-left:330px;}
+#container .p5 {margin-left:110px;}
+#container .p6 {margin-left:490px;}
+#container .p7 {margin-left:570px;}
+#container .p8 {margin-left:650px;}
+#container .p9 {margin-left:730px;}
+#container .p10 {margin-left:810px;}
+#container .p11 {margin-left:890px;}
+
+.gg10g #container .p1 {margin-left:85px;}
+.gg10g #container .p2 {margin-left:165px;}
+.gg10g #container .p3 {margin-left:245px;}
+.gg10g #container .p4 {margin-left:325px;}
+.gg10g #container .p5 {margin-left:105px;}
+.gg10g #container .p6 {margin-left:485px;}
+.gg10g #container .p7 {margin-left:565px;}
+.gg10g #container .p8 {margin-left:645px;}
+.gg10g #container .p9 {margin-left:725px;}
+.gg10g #container .p10 {margin-left:805px;}
+.gg10g #container .p11 {margin-left:885px;}
+
+.gg0g #container .p1 {margin-left:80px;}
+.gg0g #container .p2 {margin-left:160px;}
+.gg0g #container .p3 {margin-left:240px;}
+.gg0g #container .p4 {margin-left:320px;}
+.gg0g #container .p5 {margin-left:100px;}
+.gg0g #container .p6 {margin-left:480px;}
+.gg0g #container .p7 {margin-left:560px;}
+.gg0g #container .p8 {margin-left:640px;}
+.gg0g #container .p9 {margin-left:720px;}
+.gg0g #container .p10 {margin-left:800px;}
+.gg0g #container .p11 {margin-left:880px;}
+
+
+
+.alignleft {float:left;}
+.alignright {float:right;}
+
+.clear,
+.cleargap {
+    clear:both;
+    line-height:1em;
+}
+.clear {font-size:0;}
+.cleargap {height:1em;}
+
+hgroup,
+h1,h2,h3,h4,h5,h6 {clear:both;font-weight:bold;}
+
+h1 {font-size:2em;}
+h2 {font-size:1.7em;}
+h3 {font-size:1.4em;}
+h4 {font-size:1.3em;}
+h5 {font-size:1.2em;}
+h6 {font-size:1.1em;}
+
+section h1 {font-size:1.7em;}
+section section h1 {font-size:1.4em;}
+section section section h1 {font-size:1.3em;}
+section section section section h1 {font-size:1.2em;}
+section section section section section h1 {font-size:1.1em;}
+
+.quarter-headers h1 {font-size:2em;}
+.quarter-headers h2 {font-size:1.75em;}
+.quarter-headers h3 {font-size:1.5em;}
+.quarter-headers h4 {font-size:1.25em;}
+.quarter-headers h5 {font-size:1em;}
+.quarter-headers h6 {font-size:0.75em;}
+
+pre {font-size:1em;}
+
+.single-spaced p,
+ul, ol {margin-bottom:0.5em;}
+
+p,
+ul, ol, dl,
+address,
+pre,
+code,
+table,
+p {margin-bottom:1em;}
+
+p,
+dl,
+ul li,
+ol li {line-height:2em;}
+
+address {line-height:1.75em;}
+
+code,
+pre,
+blockquote,
+.single-spaced p,
+.single-spaced ul,
+.single-spaced ol,
+.single-spaced ul li,
+.single-spaced ol li {line-height:1.25em;}
+
+dl.indent dd {padding-left:0.5in;}
+dl.bold dt {font-weight:bold;}
+
+blockquote {
+    padding:0 0 0 0.5in;
+    margin:1em 0;
+}
+
+code {
+    display:block;
+    white-space:pre;
+    font-size:1em;
+}
+p code {
+    margin:0;
+    white-space:normal;
+    display:inline;
+}
+
+ol.loweralpha {list-style-type:lower-alpha;}
+ol.upperalpha {list-style-type:upper-alpha;}
