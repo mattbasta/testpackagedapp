@@ -43,13 +43,6 @@ MANIFEST = {
         },
     },
     "default_locale": "en",
-    "screen_size": {
-        "min_width": "600",
-        "min_height": "300"
-    },
-    "required_features": [
-        "touch", "geolocation", "webgl"
-    ],
     "orientation": "landscape",
     "fullscreen": "true"
 }
