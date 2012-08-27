@@ -112,6 +112,9 @@ class BuildHandler(BaseHandler):
                     data["name"] = generate_name()
                     data["description"] = generate_description()
 
+            if self.request.get("version"):
+                manifest["version"] = str(self.request.get("version"))
+
             if not self.request.get("exclude_manifest"):
                 self._add(outfile, "manifest.webapp", json.dumps(manifest))
 
