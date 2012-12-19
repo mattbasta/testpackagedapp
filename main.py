@@ -28,8 +28,8 @@ MANIFEST = {
         "url": "http://mozillalabs.com"
     },
     "installs_allowed_from": [
-        "https://marketplace.mozilla.org/",
-        "https://marketplace-dev.mozilla.org/"
+        "https://marketplace.firefox.com",
+        "https://marketplace-dev.allizom.org"
     ],
     "launch_path": "/index.html",
     "locales": {
