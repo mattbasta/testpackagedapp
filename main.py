@@ -146,6 +146,27 @@ class BuildHandler(BaseHandler):
                 self._add(outfile, "index.html",
                         self.render_template_raw("app_index.html", **manifest))
 
+            if self.request.get("include_contacts"):
+                self._add_file(outfile, "contacts.js",
+                               "content/features/contacts.js")
+                js.add("contacts.js")
+            if self.request.get("include_fullscreen"):
+                self._add_file(outfile, "fullscreen.js",
+                               "content/features/fullscreen.js")
+                js.add("fullscreen.js")
+            if self.request.get("include_geolocation"):
+                self._add_file(outfile, "geolocation.js",
+                               "content/features/geolocation.js")
+                js.add("geolocation.js")
+            if self.request.get("include_webpay"):
+                self._add_file(outfile, "pay.js",
+                               "content/features/pay.js")
+                js.add("pay.js")
+            if self.request.get("include_sms"):
+                self._add_file(outfile, "sms.js",
+                               "content/features/sms.js")
+                js.add("sms.js")
+
         sio.seek(0)
         self.response.out.write(sio.getvalue())
 
