@@ -115,6 +115,9 @@ class BuildHandler(BaseHandler):
             if self.request.get("version"):
                 manifest["version"] = str(self.request.get("version"))
 
+            if self.request.get("origin"):
+                manifest["origin"] = str(self.request.get("origin"))
+
             if not self.request.get("exclude_manifest"):
                 self._add(outfile, "manifest.webapp", json.dumps(manifest))
 
